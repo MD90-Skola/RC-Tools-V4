@@ -2,47 +2,53 @@
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Windows.Forms;
 
-public class FunctionPortableTools
+namespace Modern.Forms
 {
-    public static void StartPortableTool(string zipFileName, string exeName)
+    public static class FunctionPortableTools
     {
-        string basePath = Application.StartupPath;
-        string zipPath = Path.Combine(basePath, @"Resources\Program", zipFileName);
-        string extractFolder = Path.GetFileNameWithoutExtension(zipFileName); // t.ex. "openhardwaremonitor-v0.9.6"
-        string extractPath = Path.Combine(basePath, @"Resources\Program", extractFolder);
-        string exePath = Path.Combine(extractPath, exeName);
-
-        try
+        public static void StartPortableTool(string zipFileName, string exeName)
         {
-            // Extrahera om inte redan gjort
-            if (!Directory.Exists(extractPath))
+            // Sökvägar
+            string basePath = Application.StartupPath;
+            string zipPath = Path.Combine(basePath, @"Resources\Program", zipFileName);
+            string extractFolder = Path.GetFileNameWithoutExtension(zipFileName);
+            string extractPath = Path.Combine(basePath, @"Resources\Program", extractFolder);
+
+            try
             {
-                if (File.Exists(zipPath))
+                // Packa upp ZIP om mappen inte redan finns
+                if (!Directory.Exists(extractPath))
                 {
-                    ZipFile.ExtractToDirectory(zipPath, extractPath);
+                    if (File.Exists(zipPath))
+                    {
+                        ZipFile.ExtractToDirectory(zipPath, extractPath);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Zip-filen hittades inte:\n{zipPath}", "Fel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
+                // Leta efter EXE-filen i alla undermappar
+                string exeFullPath = Directory.GetFiles(extractPath, exeName, SearchOption.AllDirectories).FirstOrDefault();
+
+                if (exeFullPath != null)
+                {
+                    Process.Start(exeFullPath);
                 }
                 else
                 {
-                    MessageBox.Show("Zip-filen saknas:\n" + zipPath, "Fel");
-                    return;
+                    MessageBox.Show($"EXE-filen hittades inte:\n{exeName}", "Fel", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            // Starta exe
-            if (File.Exists(exePath))
+            catch (Exception ex)
             {
-                Process.Start(exePath);
+                MessageBox.Show($"Fel vid uppstart:\n{ex.Message}", "Fel", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("EXE-filen hittades inte:\n" + exePath, "Fel");
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Fel vid uppstart:\n" + ex.Message, "Fel");
         }
     }
 }

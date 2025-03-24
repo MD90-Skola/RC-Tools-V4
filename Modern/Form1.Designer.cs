@@ -117,7 +117,7 @@
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ItchIo;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.C;
             this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 35;
@@ -140,7 +140,7 @@
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.Font = new System.Drawing.Font("Verdana", 8.8F, System.Drawing.FontStyle.Bold);
             this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Github;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.House;
             this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;

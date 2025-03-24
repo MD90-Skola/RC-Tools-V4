@@ -154,5 +154,30 @@ namespace Modern.Forms
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FunctionPortableTools.StartPortableTool("RidNacs-3.0.zip", "RidNacs.exe");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FunctionPortableTools.StartPortableTool("openhardwaremonitor.zip", "OpenHardwareMonitor.exe");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FunctionPortableTools.StartPortableTool("Autoruns.zip", "Autoruns.exe");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FunctionPortableTools.StartPortableTool("CrystalDiskInfo.zip", "DiskInfo64A.exe");
+        }
     }
 }

@@ -1,48 +1,66 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
+﻿using System.IO;
 using System.IO.Compression;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
-public class FunctionPortableTools
+namespace Modern.Forms // <-- Viktigt att det är samma namespace!
 {
-    public static void StartPortableTool(string zipFileName, string exeName)
+    public static class FunctionsPortableTools
     {
-        string basePath = Application.StartupPath;
-        string zipPath = Path.Combine(basePath, @"Resources\Program", zipFileName);
-        string extractFolder = Path.GetFileNameWithoutExtension(zipFileName); // t.ex. "openhardwaremonitor-v0.9.6"
-        string extractPath = Path.Combine(basePath, @"Resources\Program", extractFolder);
-        string exePath = Path.Combine(extractPath, exeName);
-
-        try
+        public static void RunProgramFromZip(string zipFilePath, string exeName)
         {
-            // Extrahera om inte redan gjort
+            string extractPath = Path.Combine(Path.GetTempPath(), Path.GetFileNameWithoutExtension(zipFilePath));
+
             if (!Directory.Exists(extractPath))
             {
-                if (File.Exists(zipPath))
-                {
-                    ZipFile.ExtractToDirectory(zipPath, extractPath);
-                }
-                else
-                {
-                    MessageBox.Show("Zip-filen saknas:\n" + zipPath, "Fel");
-                    return;
-                }
+                ZipFile.ExtractToDirectory(zipFilePath, extractPath);
             }
 
-            // Starta exe
-            if (File.Exists(exePath))
+            // Leta efter EXE-filen i alla undermappar
+            string exeFullPath = Directory.GetFiles(extractPath, exeName, SearchOption.AllDirectories).FirstOrDefault();
+
+            if (exeFullPath != null)
             {
-                Process.Start(exePath);
+                Process.Start(exeFullPath);
             }
             else
             {
-                MessageBox.Show("EXE-filen hittades inte:\n" + exePath, "Fel");
+                MessageBox.Show($"Kunde inte hitta filen {exeName} i zip-arkivet.", "Filen hittades ej", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        catch (Exception ex)
+
+
+
+
+
+
+
+        public static void RunRidNacs()
         {
-            MessageBox.Show("Fel vid uppstart:\n" + ex.Message, "Fel");
+            RunProgramFromZip(@"C:\Users\Michel\Desktop\RC-Tools-RaccoonTools-Framewoork-complete\Modern\Resources\Program\RidNacs-3.0.zip", "RidNacs.exe");
         }
+
+
+        public static void Openhardwaremonitor()
+        {
+            RunProgramFromZip(@"C:\Users\Michel\Desktop\RC-Tools-RaccoonTools-Framewoork-complete\Modern\Resources\Program\openhardwaremonitor-v0.9.6.zip", "OpenHardwareMonitor.exe");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

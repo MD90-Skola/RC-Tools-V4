@@ -44,11 +44,13 @@
             this.iconCurrentChildForm0 = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -83,7 +85,7 @@
             this.iconButton4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.iconButton4.Size = new System.Drawing.Size(184, 73);
             this.iconButton4.TabIndex = 4;
-            this.iconButton4.Text = "Blandat";
+            this.iconButton4.Text = "Config";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
@@ -181,6 +183,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.iconPictureBox1);
             this.panelTitleBar.Controls.Add(this.lblTitleChildform1);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm0);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -194,7 +197,7 @@
             // lblTitleChildform1
             // 
             this.lblTitleChildform1.AutoSize = true;
-            this.lblTitleChildform1.Location = new System.Drawing.Point(57, 27);
+            this.lblTitleChildform1.Location = new System.Drawing.Point(404, 28);
             this.lblTitleChildform1.Name = "lblTitleChildform1";
             this.lblTitleChildform1.Size = new System.Drawing.Size(44, 16);
             this.lblTitleChildform1.TabIndex = 1;
@@ -208,10 +211,10 @@
             this.iconCurrentChildForm0.IconChar = FontAwesome.Sharp.IconChar.House;
             this.iconCurrentChildForm0.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm0.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm0.IconSize = 36;
-            this.iconCurrentChildForm0.Location = new System.Drawing.Point(15, 7);
+            this.iconCurrentChildForm0.IconSize = 26;
+            this.iconCurrentChildForm0.Location = new System.Drawing.Point(416, 3);
             this.iconCurrentChildForm0.Name = "iconCurrentChildForm0";
-            this.iconCurrentChildForm0.Size = new System.Drawing.Size(36, 36);
+            this.iconCurrentChildForm0.Size = new System.Drawing.Size(51, 26);
             this.iconCurrentChildForm0.TabIndex = 0;
             this.iconCurrentChildForm0.TabStop = false;
             this.iconCurrentChildForm0.Click += new System.EventHandler(this.iconPictureBox1_Click);
@@ -235,6 +238,20 @@
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Odnoklassniki;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(857, 10);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,6 +273,7 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,6 +292,7 @@
         private System.Windows.Forms.Label lblTitleChildform1;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
 

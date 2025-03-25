@@ -62,6 +62,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FolderFunctions\FunctionBloatWare.cs" />
     <Compile Include="Forms\FolderFunctions\README.cs" />
     <Compile Include="Forms\FolderFunctions\FunctionPortableTools.cs" />
     <Compile Include="Forms\FolderFunctions\FunctionCDKey.cs" />
@@ -79,11 +80,11 @@
     <Compile Include="Forms\FormINSTALL.Designer.cs">
       <DependentUpon>FormINSTALL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormOVRIGT.cs">
+    <Compile Include="Forms\FormCONFIG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormOVRIGT.Designer.cs">
-      <DependentUpon>FormOVRIGT.cs</DependentUpon>
+    <Compile Include="Forms\FormCONFIG.Designer.cs">
+      <DependentUpon>FormCONFIG.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormPROGRAM.cs">
       <SubType>Form</SubType>
@@ -102,8 +103,8 @@
     <EmbeddedResource Include="Forms\FormINSTALL.resx">
       <DependentUpon>FormINSTALL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormOVRIGT.resx">
-      <DependentUpon>FormOVRIGT.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormCONFIG.resx">
+      <DependentUpon>FormCONFIG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPROGRAM.resx">
       <DependentUpon>FormPROGRAM.cs</DependentUpon>

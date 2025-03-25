@@ -179,5 +179,10 @@ namespace Modern.Forms
         {
             FunctionPortableTools.StartPortableTool("CrystalDiskInfo.zip", "DiskInfo64A.exe");
         }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

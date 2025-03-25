@@ -215,7 +215,7 @@ namespace Modern
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new FormOVRIGT());
+            OpenChildForm(new FormCONFIG());
         }
 
 
@@ -369,6 +369,11 @@ namespace Modern
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconPictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
 

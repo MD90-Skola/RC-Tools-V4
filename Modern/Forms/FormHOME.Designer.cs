@@ -200,11 +200,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(607, 408);
+            this.label9.Location = new System.Drawing.Point(589, 408);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.Size = new System.Drawing.Size(53, 16);
             this.label9.TabIndex = 28;
-            this.label9.Text = "label9";
+            this.label9.Text = "CD-Key";
+            this.label9.Click += new System.EventHandler(this.label9_Click_1);
             // 
             // label10
             // 

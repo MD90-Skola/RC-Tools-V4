@@ -202,7 +202,8 @@ namespace Modern
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new formInstall());
+            OpenChildForm(new FormINSTALL());
+
 
 
 

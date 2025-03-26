@@ -43,7 +43,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(823, 449);
+            this.button1.Location = new System.Drawing.Point(852, 449);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 1;
@@ -71,19 +71,18 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(361, 436);
             this.checkedListBox1.TabIndex = 3;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button3Install
             // 
             this.button3Install.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button3Install.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button3Install.Location = new System.Drawing.Point(708, 449);
+            this.button3Install.Location = new System.Drawing.Point(746, 449);
             this.button3Install.Name = "button3Install";
             this.button3Install.Size = new System.Drawing.Size(100, 41);
             this.button3Install.TabIndex = 4;
-            this.button3Install.Text = "ALL";
+            this.button3Install.Text = "Install";
             this.button3Install.UseVisualStyleBackColor = false;
-            this.button3Install.Click += new System.EventHandler(this.button3Install_Click);
             // 
             // FormCONFIG
             // 
@@ -91,7 +90,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(947, 502);
+            this.ClientSize = new System.Drawing.Size(950, 502);
             this.Controls.Add(this.button3Install);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button2);

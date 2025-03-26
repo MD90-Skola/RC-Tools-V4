@@ -22,6 +22,7 @@ using Modern.Forms.FolderFunctions;
 using System.Management; // ✅ Denna är absolut nödvändig!
 using System.Diagnostics;
 using System.IO;
+using System.Media;
 
 
 
@@ -259,14 +260,23 @@ namespace Modern
         }
 
 
-
+        // ARISE EASTER EGG "rigthklick logo"
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            string filePath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, "Resources", "Arise2.wav");
+
+            if (System.IO.File.Exists(filePath))
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(filePath);
+                player.Play();
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Ljudfilen hittades inte: " + filePath);
+            }
+
             Reset();
-
-
-
 
         }
 
@@ -389,6 +399,17 @@ namespace Modern
         private void iconPictureBox1_Click_1(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new FormMEDIA());
         }
 
 

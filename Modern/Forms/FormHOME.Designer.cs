@@ -41,7 +41,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.iconToolStripButton1 = new FontAwesome.Sharp.IconToolStripButton();
+            this.labelPortabeToolsText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,13 +151,6 @@
             this.textBox7.TabIndex = 22;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(669, 377);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(281, 22);
-            this.textBox8.TabIndex = 23;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -171,7 +164,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 243);
+            this.label6.Location = new System.Drawing.Point(81, 278);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 16);
             this.label6.TabIndex = 25;
@@ -240,7 +233,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 228);
+            this.button1.Location = new System.Drawing.Point(12, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 47);
             this.button1.TabIndex = 32;
@@ -255,9 +248,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 281);
+            this.button2.Location = new System.Drawing.Point(9, 316);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 47);
+            this.button2.Size = new System.Drawing.Size(67, 47);
             this.button2.TabIndex = 33;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -265,7 +258,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(81, 296);
+            this.label14.Location = new System.Drawing.Point(81, 331);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(280, 16);
             this.label14.TabIndex = 34;
@@ -279,7 +272,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(12, 334);
+            this.button3.Location = new System.Drawing.Point(12, 369);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(63, 47);
             this.button3.TabIndex = 35;
@@ -289,7 +282,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(81, 349);
+            this.label15.Location = new System.Drawing.Point(81, 384);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(175, 16);
             this.label15.TabIndex = 36;
@@ -303,7 +296,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(12, 390);
+            this.button4.Location = new System.Drawing.Point(12, 425);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 52);
             this.button4.TabIndex = 37;
@@ -313,7 +306,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(81, 405);
+            this.label16.Location = new System.Drawing.Point(81, 440);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(179, 16);
             this.label16.TabIndex = 38;
@@ -322,12 +315,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(170, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(415, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(929, 889);
+            this.pictureBox1.Size = new System.Drawing.Size(444, 883);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label17
             // 
@@ -367,12 +361,23 @@
             this.iconToolStripButton1.Size = new System.Drawing.Size(23, 23);
             this.iconToolStripButton1.Text = "iconToolStripButton1";
             // 
+            // labelPortabeToolsText
+            // 
+            this.labelPortabeToolsText.AutoSize = true;
+            this.labelPortabeToolsText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPortabeToolsText.Location = new System.Drawing.Point(83, 214);
+            this.labelPortabeToolsText.Name = "labelPortabeToolsText";
+            this.labelPortabeToolsText.Size = new System.Drawing.Size(181, 22);
+            this.labelPortabeToolsText.TabIndex = 43;
+            this.labelPortabeToolsText.Text = "--   Portabel Tools   --";
+            // 
             // FormHOME
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(225)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(937, 473);
+            this.Controls.Add(this.labelPortabeToolsText);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -391,7 +396,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -428,7 +432,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -449,5 +452,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private FontAwesome.Sharp.IconToolStripButton iconToolStripButton1;
+        private System.Windows.Forms.Label labelPortabeToolsText;
     }
 }

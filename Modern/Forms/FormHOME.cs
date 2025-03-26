@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management;
+using System.Media;
+using System.IO;
 
 
 namespace Modern.Forms
@@ -47,7 +49,7 @@ namespace Modern.Forms
             textBox7.Text = FunctionsDatorSpecs.HämtaCputemp();
 
             var nätverkskort = FunctionsDatorSpecs.HämtaNätverkskort();
-            textBox8.Text = nätverkskort.Length > 0 ? nätverkskort[0] : "Inget kort aktivt";
+           // textBox8.Text = nätverkskort.Length > 0 ? nätverkskort[0] : "Inget kort aktivt";
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -234,6 +236,13 @@ namespace Modern.Forms
         private void label19_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

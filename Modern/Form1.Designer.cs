@@ -33,6 +33,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -45,18 +46,23 @@
             this.iconCurrentChildForm0 = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBoxGithub = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBoxYouTube = new FontAwesome.Sharp.IconPictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxGithub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxYouTube)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.iconPictureBoxYouTube);
+            this.panelMenu.Controls.Add(this.iconPictureBoxGithub);
             this.panelMenu.Controls.Add(this.iconButton5);
             this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.iconButton3);
@@ -71,13 +77,35 @@
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
             // 
+            // iconButton5
+            // 
+            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Film;
+            this.iconButton5.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 35;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(0, 395);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.iconButton5.Size = new System.Drawing.Size(184, 73);
+            this.iconButton5.TabIndex = 5;
+            this.iconButton5.Text = "Media";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
             // iconButton4
             // 
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Ioxhost;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Brush;
             this.iconButton4.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 35;
@@ -87,7 +115,7 @@
             this.iconButton4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.iconButton4.Size = new System.Drawing.Size(184, 73);
             this.iconButton4.TabIndex = 4;
-            this.iconButton4.Text = "Config";
+            this.iconButton4.Text = "CleanUp";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
@@ -121,7 +149,7 @@
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.C;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.DesktopAlt;
             this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 35;
@@ -131,7 +159,7 @@
             this.iconButton2.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.iconButton2.Size = new System.Drawing.Size(184, 73);
             this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "Install";
+            this.iconButton2.Text = "Program";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
@@ -176,7 +204,7 @@
             this.btnHome.Image = global::Modern.Properties.Resources.tools1;
             this.btnHome.Location = new System.Drawing.Point(12, 12);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(135, 53);
+            this.btnHome.Size = new System.Drawing.Size(153, 66);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -247,7 +275,7 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.BackColor = System.Drawing.Color.Transparent;
+            this.panelDesktop.BackColor = System.Drawing.Color.DarkGray;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(184, 65);
             this.panelDesktop.Name = "panelDesktop";
@@ -255,27 +283,33 @@
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // iconButton5
+            // iconPictureBoxGithub
             // 
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Ioxhost;
-            this.iconButton5.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 35;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 395);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.iconButton5.Size = new System.Drawing.Size(184, 73);
-            this.iconButton5.TabIndex = 5;
-            this.iconButton5.Text = "Media";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            this.iconPictureBoxGithub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBoxGithub.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxGithub.IconChar = FontAwesome.Sharp.IconChar.Github;
+            this.iconPictureBoxGithub.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxGithub.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxGithub.Location = new System.Drawing.Point(133, 540);
+            this.iconPictureBoxGithub.Name = "iconPictureBoxGithub";
+            this.iconPictureBoxGithub.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBoxGithub.TabIndex = 6;
+            this.iconPictureBoxGithub.TabStop = false;
+            this.iconPictureBoxGithub.Click += new System.EventHandler(this.iconPictureBoxGithub_Click);
+            // 
+            // iconPictureBoxYouTube
+            // 
+            this.iconPictureBoxYouTube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBoxYouTube.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxYouTube.IconChar = FontAwesome.Sharp.IconChar.Youtube;
+            this.iconPictureBoxYouTube.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxYouTube.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxYouTube.Location = new System.Drawing.Point(95, 540);
+            this.iconPictureBoxYouTube.Name = "iconPictureBoxYouTube";
+            this.iconPictureBoxYouTube.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBoxYouTube.TabIndex = 7;
+            this.iconPictureBoxYouTube.TabStop = false;
+            this.iconPictureBoxYouTube.Click += new System.EventHandler(this.iconPictureBoxYouTube_Click);
             // 
             // Form1
             // 
@@ -299,6 +333,8 @@
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxGithub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxYouTube)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,6 +355,8 @@
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBoxGithub;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBoxYouTube;
     }
 }
 

@@ -412,6 +412,16 @@ namespace Modern
             OpenChildForm(new FormMEDIA());
         }
 
+        private void iconPictureBoxYouTube_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.youtube.com/@Doctor9Raccoon");
+        }
+
+        private void iconPictureBoxGithub_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/MD90-Skola/MD90-Skola");
+        }
+
 
 
 

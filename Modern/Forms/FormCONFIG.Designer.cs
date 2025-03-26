@@ -96,7 +96,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "FormCONFIG";
-            this.Text = "Övrigt";
+            this.Text = "BloatWare";
             this.Load += new System.EventHandler(this.FormCONFIG_Load);
             this.ResumeLayout(false);
 

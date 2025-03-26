@@ -25,22 +25,18 @@
             // 
             // checkedListBox1
             // 
-            
-            this.checkedListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.checkedListBox1.FormattingEnabled = false;
-            this.checkedListBox1.ItemHeight = 60;
-            this.checkedListBox1.Location = new System.Drawing.Point(460, 11);
+            this.checkedListBox1.Location = new System.Drawing.Point(711, 11);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(378, 446);
+            this.checkedListBox1.Size = new System.Drawing.Size(239, 327);
             this.checkedListBox1.TabIndex = 0;
             // 
             // buttonInstall
             // 
-            this.buttonInstall.Location = new System.Drawing.Point(614, 493);
+            this.buttonInstall.Location = new System.Drawing.Point(878, 342);
             this.buttonInstall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInstall.Name = "buttonInstall";
-            this.buttonInstall.Size = new System.Drawing.Size(120, 32);
+            this.buttonInstall.Size = new System.Drawing.Size(72, 32);
             this.buttonInstall.TabIndex = 1;
             this.buttonInstall.Text = "Installera";
             this.buttonInstall.UseVisualStyleBackColor = true;
@@ -48,10 +44,10 @@
             // 
             // buttonAll
             // 
-            this.buttonAll.Location = new System.Drawing.Point(460, 493);
+            this.buttonAll.Location = new System.Drawing.Point(711, 342);
             this.buttonAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAll.Name = "buttonAll";
-            this.buttonAll.Size = new System.Drawing.Size(120, 32);
+            this.buttonAll.Size = new System.Drawing.Size(83, 32);
             this.buttonAll.TabIndex = 2;
             this.buttonAll.Text = "Välj alla";
             this.buttonAll.UseVisualStyleBackColor = true;
@@ -59,10 +55,10 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(740, 493);
+            this.buttonDelete.Location = new System.Drawing.Point(800, 342);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(120, 32);
+            this.buttonDelete.Size = new System.Drawing.Size(72, 32);
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Ta bort";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -72,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 557);
+            this.ClientSize = new System.Drawing.Size(962, 450);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAll);
             this.Controls.Add(this.buttonInstall);
@@ -82,7 +78,6 @@
             this.Text = "Installera program";
             this.Load += new System.EventHandler(this.FormINSTALL_Load);
             this.ResumeLayout(false);
-            
 
         }
     }

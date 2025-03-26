@@ -28,7 +28,7 @@ namespace Modern.Forms
             var bloatwareList = FunctionBloatWare.GetBloatwareList();
             foreach (var app in bloatwareList)
             {
-                checkedListBox1.Items.Add($"{app.DisplayName} ({app.PackageName})");
+                checkedListBox1.Items.Add($"{app.DisplayName}");
             }
         }
 

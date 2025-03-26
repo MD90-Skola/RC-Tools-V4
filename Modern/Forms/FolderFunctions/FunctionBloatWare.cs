@@ -38,7 +38,7 @@ public static class FunctionBloatWare
     {
         return new List<AppInfo>
         {
-            new AppInfo { DisplayName = "3D Builder", PackageName = "Microsoft.3DBuilder", Category = "Bloatware" },
+            new AppInfo { DisplayName = "3D Builder", PackageName = "", Category = "Bloatware" },
             new AppInfo { DisplayName = "3D Viewer", PackageName = "Microsoft.Microsoft3DViewer", Category = "Bloatware" },
             new AppInfo { DisplayName = "Films & TV", PackageName = "Microsoft.ZuneVideo", Category = "Bloatware" },
             new AppInfo { DisplayName = "Get Help", PackageName = "Microsoft.GetHelp", Category = "Bloatware" },

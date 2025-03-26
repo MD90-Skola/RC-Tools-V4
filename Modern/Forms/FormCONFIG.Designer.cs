@@ -55,7 +55,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button2.Location = new System.Drawing.Point(591, 449);
+            this.button2.Location = new System.Drawing.Point(640, 449);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 41);
             this.button2.TabIndex = 2;
@@ -67,9 +67,9 @@
             // 
             this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(591, 7);
+            this.checkedListBox1.Location = new System.Drawing.Point(640, 7);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(361, 436);
+            this.checkedListBox1.Size = new System.Drawing.Size(312, 436);
             this.checkedListBox1.TabIndex = 3;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 

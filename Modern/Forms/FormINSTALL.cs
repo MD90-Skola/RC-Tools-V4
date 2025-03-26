@@ -29,7 +29,7 @@ namespace Modern.Forms
             var programList = FunctionBloatWare.GetProgramList();
             foreach (var app in programList.OrderBy(p => p.DisplayName))
             {
-                checkedListBox1.Items.Add($"{app.DisplayName} ({app.PackageName})");
+                checkedListBox1.Items.Add($"{app.DisplayName}");
             }
         }
 

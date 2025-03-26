@@ -15,6 +15,13 @@ namespace Modern.Forms
     {
         private Timer klockaTimer;
 
+
+
+
+
+
+
+
         public FormHOME()
         {
             InitializeComponent();
@@ -43,7 +50,12 @@ namespace Modern.Forms
             textBox8.Text = nätverkskort.Length > 0 ? nätverkskort[0] : "Inget kort aktivt";
         }
 
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            klockaTimer?.Stop();
+            klockaTimer?.Dispose();
+            base.OnFormClosing(e);
+        }
 
 
         private void VisaDatorSpec()
@@ -94,10 +106,16 @@ namespace Modern.Forms
             klockaTimer.Interval = 1000;
             klockaTimer.Tick += (s, e) =>
             {
-                label1.Text = FunctionsKlocka.HämtaDatum();     // YYYY-MM-DD
-                label2.Text = FunctionsKlocka.HämtaTid();       // TT:MM:SS
+             //   label1.Text = FunctionsKlocka.HämtaDatum();     // YYYY-MM-DD
+                                                                //    label2.Text = FunctionsKlocka.HämtaTid();       // TT:MM:SS
                 label3.Text = FunctionsKlocka.HämtaManad();     // MMMM månad
                 label4.Text = FunctionsKlocka.HämtaVecka();     // Vecka: 00
+                label17.Text = DateTime.Now.ToString("dddd");            // Veckodag
+                label18.Text = DateTime.Now.ToString("dd");            // Veckodag
+                label19.Text = DateTime.Now.ToString("MM");
+
+
+
             };
             klockaTimer.Start();
         }
@@ -181,6 +199,39 @@ namespace Modern.Forms
         }
 
         private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+
+      
+
+
+
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
         {
 
         }

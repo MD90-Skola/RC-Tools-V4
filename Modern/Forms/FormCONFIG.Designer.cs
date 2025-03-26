@@ -90,7 +90,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(950, 502);
+            this.ClientSize = new System.Drawing.Size(937, 473);
             this.Controls.Add(this.button3Install);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.button2);

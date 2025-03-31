@@ -43,6 +43,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.buttonAPI = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildform1 = new System.Windows.Forms.Label();
             this.iconCurrentChildForm0 = new FontAwesome.Sharp.IconPictureBox();
@@ -72,7 +73,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(184, 584);
+            this.panelMenu.Size = new System.Drawing.Size(184, 653);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
@@ -84,7 +85,7 @@
             this.iconPictureBoxYouTube.IconChar = FontAwesome.Sharp.IconChar.Youtube;
             this.iconPictureBoxYouTube.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPictureBoxYouTube.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxYouTube.Location = new System.Drawing.Point(111, 549);
+            this.iconPictureBoxYouTube.Location = new System.Drawing.Point(111, 609);
             this.iconPictureBoxYouTube.Name = "iconPictureBoxYouTube";
             this.iconPictureBoxYouTube.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBoxYouTube.TabIndex = 7;
@@ -98,7 +99,7 @@
             this.iconPictureBoxGithub.IconChar = FontAwesome.Sharp.IconChar.Github;
             this.iconPictureBoxGithub.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPictureBoxGithub.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxGithub.Location = new System.Drawing.Point(149, 549);
+            this.iconPictureBoxGithub.Location = new System.Drawing.Point(149, 609);
             this.iconPictureBoxGithub.Name = "iconPictureBoxGithub";
             this.iconPictureBoxGithub.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBoxGithub.TabIndex = 6;
@@ -242,16 +243,27 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.buttonAPI);
             this.panelTitleBar.Controls.Add(this.iconPictureBox1);
             this.panelTitleBar.Controls.Add(this.lblTitleChildform1);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm0);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(184, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(955, 48);
+            this.panelTitleBar.Size = new System.Drawing.Size(1070, 48);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // buttonAPI
+            // 
+            this.buttonAPI.Location = new System.Drawing.Point(614, 10);
+            this.buttonAPI.Name = "buttonAPI";
+            this.buttonAPI.Size = new System.Drawing.Size(69, 26);
+            this.buttonAPI.TabIndex = 3;
+            this.buttonAPI.Text = "API KEY";
+            this.buttonAPI.UseVisualStyleBackColor = true;
+            this.buttonAPI.Click += new System.EventHandler(this.buttonAPI_Click);
             // 
             // iconPictureBox1
             // 
@@ -260,7 +272,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Odnoklassniki;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(911, 10);
+            this.iconPictureBox1.Location = new System.Drawing.Point(1030, 6);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 2;
@@ -270,7 +282,7 @@
             // lblTitleChildform1
             // 
             this.lblTitleChildform1.AutoSize = true;
-            this.lblTitleChildform1.Location = new System.Drawing.Point(846, 26);
+            this.lblTitleChildform1.Location = new System.Drawing.Point(965, 22);
             this.lblTitleChildform1.Name = "lblTitleChildform1";
             this.lblTitleChildform1.Size = new System.Drawing.Size(44, 16);
             this.lblTitleChildform1.TabIndex = 1;
@@ -285,7 +297,7 @@
             this.iconCurrentChildForm0.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm0.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm0.IconSize = 26;
-            this.iconCurrentChildForm0.Location = new System.Drawing.Point(814, 16);
+            this.iconCurrentChildForm0.Location = new System.Drawing.Point(933, 12);
             this.iconCurrentChildForm0.Name = "iconCurrentChildForm0";
             this.iconCurrentChildForm0.Size = new System.Drawing.Size(26, 26);
             this.iconCurrentChildForm0.TabIndex = 0;
@@ -298,7 +310,7 @@
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(184, 48);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(955, 17);
+            this.panelShadow.Size = new System.Drawing.Size(1070, 17);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
@@ -307,7 +319,7 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(184, 65);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(955, 519);
+            this.panelDesktop.Size = new System.Drawing.Size(1070, 588);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
@@ -315,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 584);
+            this.ClientSize = new System.Drawing.Size(1254, 653);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
@@ -357,6 +369,7 @@
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxGithub;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxYouTube;
+        private System.Windows.Forms.Button buttonAPI;
     }
 }
 

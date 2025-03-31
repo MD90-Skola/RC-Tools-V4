@@ -80,7 +80,33 @@ namespace Modern.Forms
                             document.querySelectorAll('audio, video').forEach(el => el.volume = 0.8);
                         };
                         setVolume();
-                        setInterval(setVolume, 3000); // ifall nya ljud dyker upp
+                        setInterval(setVolume, 3000);
+                    };
+
+                    // Ny funktion för att styla procentvärdet
+                    const stylePercentage = () => {
+                        document.querySelectorAll('*').forEach(el => {
+                            if (el.childNodes.length === 1 && el.childNodes[0].nodeType === Node.TEXT_NODE) {
+                                let match = el.textContent.match(/([+-]\\d+(\\.\\d+)?)%/);
+                                if (match) {
+                                    const number = match[1];
+                                    el.innerHTML = el.textContent.replace(
+                                        number,
+                                        `<span class='custom-percentage'>${number}</span>`
+                                    );
+                                }
+                            }
+                        });
+
+                        const style = document.createElement('style');
+                        style.innerHTML = `
+                            .custom-percentage {
+                                font-size: 76px !important; 
+                                color: #00ff00 !important;
+                                font-weight: bold !important;
+                            }
+                        `;
+                        document.head.appendChild(style);
                     };
 
                     // ✅ Kör alla steg
@@ -91,6 +117,7 @@ namespace Modern.Forms
                     await wait(200);
                     await selectBestDeals();
                     hideElements();
+                    stylePercentage();
                     window.scrollBy(0, 90);
 
                 })();
@@ -99,34 +126,10 @@ namespace Modern.Forms
             await webView.ExecuteScriptAsync(script);
         }
 
-
-
-
         public static async Task ScrollDown10Px(WebView2 webView)
         {
             string scrollScript = "window.scrollBy(0, -100);";
             await webView.ExecuteScriptAsync(scrollScript);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
 }

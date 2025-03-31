@@ -75,6 +75,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FolderFunctions\FunctionBloatWare.cs" />
+    <Compile Include="Forms\FolderFunctions\FunctionCrop.cs" />
     <Compile Include="Forms\FolderFunctions\FunctionCsgoRoll.cs" />
     <Compile Include="Forms\FolderFunctions\README.cs" />
     <Compile Include="Forms\FolderFunctions\FunctionPortableTools.cs" />

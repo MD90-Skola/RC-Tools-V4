@@ -8,61 +8,125 @@ namespace Modern.Forms
         public static async Task ApplyFilters(WebView2 webView)
         {
             string script = @"
-                function triggerInputEvent(el){
-                    el.dispatchEvent(new Event('input', { bubbles: true }));
-                }
+                (async () => {
+                    const wait = ms => new Promise(res => setTimeout(res, ms));
 
-                function closeChat(){
-                    const closeButton = document.querySelector('button.mat-focus-indicator.close.clip-bl.mat-icon-button.mat-button-base');
-                    if (closeButton) closeButton.click();
-                }
+                    // 1. Stäng eventuell öppen chatt
+                    const closeChat = () => {
+                        const btn = document.querySelector('button.mat-focus-indicator.close.clip-bl.mat-icon-button.mat-button-base');
+                        if (btn) btn.click();
+                    };
 
-                function setPriceFilters(){
-                    let maxPriceInput = document.querySelector('input[data-test=""max-price""]');
-                    let minPriceInput = document.querySelector('input[data-test=""min-price""]');
-                    
-                    if(maxPriceInput){
-                        maxPriceInput.value = '1500';
-                        triggerInputEvent(maxPriceInput);
-                    }
+                    // 2. Prisfilter
+                    const setPrice = () => {
+                        const max = document.querySelector('input[data-test=""max-price""]');
+                        const min = document.querySelector('input[data-test=""min-price""]');
+                        if (max) { max.value = '1500'; max.dispatchEvent(new Event('input', { bubbles: true })); }
+                        if (min) { min.value = '10'; min.dispatchEvent(new Event('input', { bubbles: true })); }
+                    };
 
-                    if(minPriceInput){
-                        minPriceInput.value = '10';
-                        triggerInputEvent(minPriceInput);
-                    }
-                }
+                    // 3. Tryck på max-knapp
+                    const clickMax = () => {
+                        const btn = document.querySelector('button.mat-focus-indicator.fs-12.text-white.max-btn');
+                        if (btn) btn.click();
+                    };
 
-                function clickMaxBalance(){
-                    const maxButton = document.querySelector('button.mat-focus-indicator.fs-12.text-white.max-btn.text-capitalize.mat-flat-button.mat-button-base');
-                    if (maxButton) maxButton.click();
-                }
-
-                async function selectBestDeals(){
-                    // Öppna dropdown först
-                    const dropdown = document.querySelector('mat-select');
-                    if(dropdown){
+                    // 4. Välj 'Best deals'
+                    const selectBestDeals = async () => {
+                        const dropdown = document.querySelector('mat-select[formcontrolname=""orderBy""]');
+                        if (!dropdown) return;
                         dropdown.click();
-                        await new Promise(r => setTimeout(r, 500)); // vänta dropdown laddning
-
-                        const bestDealsOption = document.querySelector('mat-option#mat-option-3');
-                        if (bestDealsOption && !bestDealsOption.classList.contains('mat-selected')){
-                            bestDealsOption.click();
-                        }
-
-                        // klicka utanför för att stänga dropdown
+                        await wait(250);
+                        const best = document.querySelector('mat-option#mat-option-3');
+                        if (best && !best.classList.contains('mat-selected')) best.click();
                         document.body.click();
-                    }
-                }
+                    };
 
-                closeChat();
-                setTimeout(() => {
-                    setPriceFilters();
-                    clickMaxBalance();
-                    setTimeout(selectBestDeals, 1500);
-                }, 1500);
+                    // 5. Dölj oönskade element och sätt zoom + volym
+                    const hideElements = () => {
+                        const css = `
+                            nav.main-nav,
+                            input[data-test=""search-input""],
+                            input[data-test=""min-price""],
+                            input[data-test=""max-price""],
+                            mat-select[formcontrolname=""orderBy""],
+                            [formcontrolname=""orderBy""],
+                            button[data-test=""category-list-item""],
+                            footer,
+                            header,
+                            .chat-container,
+                            .banner,
+                            .ads,
+                            #mat-input-0,
+                            mat-form-field.order-by,
+                            mat-form-field.ng-star-inserted,
+                            button.list-btn,
+                            button.chat-toggle,
+                            button.live-chat-open,
+                            .auth-footer-container {
+                                display: none !important;
+                            }
+
+                            body {
+                                zoom: 0.8 !important;
+                                overflow: auto !important;
+                            }
+                        `;
+                        const style = document.createElement('style');
+                        style.textContent = css;
+                        document.head.appendChild(style);
+
+                        const setVolume = () => {
+                            document.querySelectorAll('audio, video').forEach(el => el.volume = 0.8);
+                        };
+                        setVolume();
+                        setInterval(setVolume, 3000); // ifall nya ljud dyker upp
+                    };
+
+                    // ✅ Kör alla steg
+                    closeChat();
+                    await wait(200);
+                    setPrice();
+                    clickMax();
+                    await wait(200);
+                    await selectBestDeals();
+                    hideElements();
+                    window.scrollBy(0, 90);
+
+                })();
             ";
 
             await webView.ExecuteScriptAsync(script);
         }
+
+
+
+
+        public static async Task ScrollDown10Px(WebView2 webView)
+        {
+            string scrollScript = "window.scrollBy(0, -100);";
+            await webView.ExecuteScriptAsync(scrollScript);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
 }

@@ -155,7 +155,7 @@
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton3.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Indent;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Gun;
             this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 35;
@@ -165,7 +165,7 @@
             this.iconButton3.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.iconButton3.Size = new System.Drawing.Size(184, 73);
             this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Program";
+            this.iconButton3.Text = "CSGOROLL";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
@@ -270,7 +270,7 @@
             // lblTitleChildform1
             // 
             this.lblTitleChildform1.AutoSize = true;
-            this.lblTitleChildform1.Location = new System.Drawing.Point(404, 28);
+            this.lblTitleChildform1.Location = new System.Drawing.Point(846, 26);
             this.lblTitleChildform1.Name = "lblTitleChildform1";
             this.lblTitleChildform1.Size = new System.Drawing.Size(44, 16);
             this.lblTitleChildform1.TabIndex = 1;
@@ -285,9 +285,9 @@
             this.iconCurrentChildForm0.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm0.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm0.IconSize = 26;
-            this.iconCurrentChildForm0.Location = new System.Drawing.Point(416, 3);
+            this.iconCurrentChildForm0.Location = new System.Drawing.Point(814, 16);
             this.iconCurrentChildForm0.Name = "iconCurrentChildForm0";
-            this.iconCurrentChildForm0.Size = new System.Drawing.Size(51, 26);
+            this.iconCurrentChildForm0.Size = new System.Drawing.Size(26, 26);
             this.iconCurrentChildForm0.TabIndex = 0;
             this.iconCurrentChildForm0.TabStop = false;
             this.iconCurrentChildForm0.Click += new System.EventHandler(this.iconPictureBox1_Click);

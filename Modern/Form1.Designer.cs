@@ -33,6 +33,8 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconPictureBoxYouTube = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBoxGithub = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -46,16 +48,14 @@
             this.iconCurrentChildForm0 = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconPictureBoxGithub = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBoxYouTube = new FontAwesome.Sharp.IconPictureBox();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxYouTube)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxGithub)).BeginInit();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxGithub)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxYouTube)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -76,6 +76,34 @@
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
+            // 
+            // iconPictureBoxYouTube
+            // 
+            this.iconPictureBoxYouTube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBoxYouTube.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxYouTube.IconChar = FontAwesome.Sharp.IconChar.Youtube;
+            this.iconPictureBoxYouTube.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxYouTube.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxYouTube.Location = new System.Drawing.Point(111, 549);
+            this.iconPictureBoxYouTube.Name = "iconPictureBoxYouTube";
+            this.iconPictureBoxYouTube.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBoxYouTube.TabIndex = 7;
+            this.iconPictureBoxYouTube.TabStop = false;
+            this.iconPictureBoxYouTube.Click += new System.EventHandler(this.iconPictureBoxYouTube_Click);
+            // 
+            // iconPictureBoxGithub
+            // 
+            this.iconPictureBoxGithub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconPictureBoxGithub.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxGithub.IconChar = FontAwesome.Sharp.IconChar.Github;
+            this.iconPictureBoxGithub.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBoxGithub.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxGithub.Location = new System.Drawing.Point(149, 549);
+            this.iconPictureBoxGithub.Name = "iconPictureBoxGithub";
+            this.iconPictureBoxGithub.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBoxGithub.TabIndex = 6;
+            this.iconPictureBoxGithub.TabStop = false;
+            this.iconPictureBoxGithub.Click += new System.EventHandler(this.iconPictureBoxGithub_Click);
             // 
             // iconButton5
             // 
@@ -283,34 +311,6 @@
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
-            // iconPictureBoxGithub
-            // 
-            this.iconPictureBoxGithub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBoxGithub.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPictureBoxGithub.IconChar = FontAwesome.Sharp.IconChar.Github;
-            this.iconPictureBoxGithub.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPictureBoxGithub.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxGithub.Location = new System.Drawing.Point(133, 540);
-            this.iconPictureBoxGithub.Name = "iconPictureBoxGithub";
-            this.iconPictureBoxGithub.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBoxGithub.TabIndex = 6;
-            this.iconPictureBoxGithub.TabStop = false;
-            this.iconPictureBoxGithub.Click += new System.EventHandler(this.iconPictureBoxGithub_Click);
-            // 
-            // iconPictureBoxYouTube
-            // 
-            this.iconPictureBoxYouTube.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconPictureBoxYouTube.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPictureBoxYouTube.IconChar = FontAwesome.Sharp.IconChar.Youtube;
-            this.iconPictureBoxYouTube.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPictureBoxYouTube.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxYouTube.Location = new System.Drawing.Point(95, 540);
-            this.iconPictureBoxYouTube.Name = "iconPictureBoxYouTube";
-            this.iconPictureBoxYouTube.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBoxYouTube.TabIndex = 7;
-            this.iconPictureBoxYouTube.TabStop = false;
-            this.iconPictureBoxYouTube.Click += new System.EventHandler(this.iconPictureBoxYouTube_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,14 +327,14 @@
             this.Text = "iconCurrentChildForm1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxYouTube)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxGithub)).EndInit();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxGithub)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxYouTube)).EndInit();
             this.ResumeLayout(false);
 
         }

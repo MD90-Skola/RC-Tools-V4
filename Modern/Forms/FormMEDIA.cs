@@ -4,11 +4,12 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using Microsoft.VisualBasic; // Behövs för InputBox
+using Microsoft.Web.WebView2.WinForms;
 
-    
-    
-    
-    
+
+
+
+
 namespace Modern.Forms
 {
     public partial class FormMEDIA : Form
@@ -21,6 +22,21 @@ namespace Modern.Forms
 
         private void FormMEDIA_Load(object sender, EventArgs e)
         {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Gör buttonRund helt rund
             GraphicsPath rundPath = new GraphicsPath();
             rundPath.AddEllipse(0, 0, buttonRund.Width, buttonRund.Height);
@@ -118,6 +134,16 @@ namespace Modern.Forms
         private void buttonCrop_Click(object sender, EventArgs e)
         {
             Process.Start("https://imageresizer.com/crop-image");
+        }
+
+        private void FormMEDIA_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

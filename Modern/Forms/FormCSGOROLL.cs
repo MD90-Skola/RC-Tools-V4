@@ -28,23 +28,7 @@ namespace Modern.Forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-            // 1. Öppna första URL
-            string url1 = "https://www.csgoroll.com/player/VXNlcjo2ODU5NTc2/summary";
-            Process.Start(new ProcessStartInfo(url1) { UseShellExecute = true });
-
-
-            // 2. Öppna andra URL
-            string url2 = "https://steamcommunity.com/id/me/edit/info";
-            Process.Start(new ProcessStartInfo(url2) { UseShellExecute = true });
-
-
-            // 3. Kopiera script till urklipp
-            string script = "document.getElementById(\"application_config\").getAttribute('data-loyalty_webapi_token');";
-            Clipboard.SetText(script);
-        }
 
         private async void button2_Click(object sender, EventArgs e)
         {

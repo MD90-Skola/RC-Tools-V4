@@ -1,12 +1,18 @@
-﻿### hej
+﻿### IDE BANK
 
 
-da
-wd
-awd
-aw
-d
-awd
+- Folder Functions
+- skapa ett verktyg som kan ändra ljudkälla
 
 
-FunctionPortableTools.StartPortableTool("RidNacs-3.0.zip", "RidNacs.exe");
+
+
+
+
+
+
+
+
+
+
+// FunctionPortableTools.StartPortableTool("RidNacs-3.0.zip", "RidNacs.exe");

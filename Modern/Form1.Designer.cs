@@ -33,6 +33,8 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButtonMEDIA2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton6CROP = new FontAwesome.Sharp.IconButton();
             this.iconPictureBoxYouTube = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBoxGithub = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -43,6 +45,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.buttonRollOPEN = new System.Windows.Forms.Button();
             this.buttonAPI = new System.Windows.Forms.Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildform1 = new System.Windows.Forms.Label();
@@ -62,6 +65,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.iconButtonMEDIA2);
+            this.panelMenu.Controls.Add(this.iconButton6CROP);
             this.panelMenu.Controls.Add(this.iconPictureBoxYouTube);
             this.panelMenu.Controls.Add(this.iconPictureBoxGithub);
             this.panelMenu.Controls.Add(this.iconButton5);
@@ -77,6 +82,50 @@
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseDown);
+            // 
+            // iconButtonMEDIA2
+            // 
+            this.iconButtonMEDIA2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonMEDIA2.FlatAppearance.BorderSize = 0;
+            this.iconButtonMEDIA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonMEDIA2.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
+            this.iconButtonMEDIA2.IconChar = FontAwesome.Sharp.IconChar.Film;
+            this.iconButtonMEDIA2.IconColor = System.Drawing.Color.Empty;
+            this.iconButtonMEDIA2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonMEDIA2.IconSize = 35;
+            this.iconButtonMEDIA2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonMEDIA2.Location = new System.Drawing.Point(0, 505);
+            this.iconButtonMEDIA2.Name = "iconButtonMEDIA2";
+            this.iconButtonMEDIA2.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.iconButtonMEDIA2.Size = new System.Drawing.Size(184, 37);
+            this.iconButtonMEDIA2.TabIndex = 9;
+            this.iconButtonMEDIA2.Text = "Film";
+            this.iconButtonMEDIA2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonMEDIA2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonMEDIA2.UseVisualStyleBackColor = true;
+            this.iconButtonMEDIA2.Click += new System.EventHandler(this.iconButtonMEDIA2_Click_1);
+            // 
+            // iconButton6CROP
+            // 
+            this.iconButton6CROP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton6CROP.FlatAppearance.BorderSize = 0;
+            this.iconButton6CROP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6CROP.Font = new System.Drawing.Font("Verdana", 8.1F, System.Drawing.FontStyle.Bold);
+            this.iconButton6CROP.IconChar = FontAwesome.Sharp.IconChar.Film;
+            this.iconButton6CROP.IconColor = System.Drawing.Color.Empty;
+            this.iconButton6CROP.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6CROP.IconSize = 35;
+            this.iconButton6CROP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6CROP.Location = new System.Drawing.Point(0, 468);
+            this.iconButton6CROP.Name = "iconButton6CROP";
+            this.iconButton6CROP.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.iconButton6CROP.Size = new System.Drawing.Size(184, 37);
+            this.iconButton6CROP.TabIndex = 8;
+            this.iconButton6CROP.Text = "Crop";
+            this.iconButton6CROP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6CROP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6CROP.UseVisualStyleBackColor = true;
+            this.iconButton6CROP.Click += new System.EventHandler(this.iconButton6CROP_Click);
             // 
             // iconPictureBoxYouTube
             // 
@@ -243,6 +292,7 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.buttonRollOPEN);
             this.panelTitleBar.Controls.Add(this.buttonAPI);
             this.panelTitleBar.Controls.Add(this.iconPictureBox1);
             this.panelTitleBar.Controls.Add(this.lblTitleChildform1);
@@ -250,18 +300,30 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(184, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1070, 48);
+            this.panelTitleBar.Size = new System.Drawing.Size(1070, 42);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
+            // buttonRollOPEN
+            // 
+            this.buttonRollOPEN.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonRollOPEN.Location = new System.Drawing.Point(119, 6);
+            this.buttonRollOPEN.Name = "buttonRollOPEN";
+            this.buttonRollOPEN.Size = new System.Drawing.Size(107, 33);
+            this.buttonRollOPEN.TabIndex = 4;
+            this.buttonRollOPEN.Text = "Browser";
+            this.buttonRollOPEN.UseVisualStyleBackColor = true;
+            this.buttonRollOPEN.Click += new System.EventHandler(this.buttonRollLogin_Click);
+            // 
             // buttonAPI
             // 
-            this.buttonAPI.Location = new System.Drawing.Point(614, 10);
+            this.buttonAPI.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonAPI.Location = new System.Drawing.Point(6, 6);
             this.buttonAPI.Name = "buttonAPI";
-            this.buttonAPI.Size = new System.Drawing.Size(69, 26);
+            this.buttonAPI.Size = new System.Drawing.Size(107, 33);
             this.buttonAPI.TabIndex = 3;
-            this.buttonAPI.Text = "API KEY";
+            this.buttonAPI.Text = "Renew API";
             this.buttonAPI.UseVisualStyleBackColor = true;
             this.buttonAPI.Click += new System.EventHandler(this.buttonAPI_Click);
             // 
@@ -308,18 +370,18 @@
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelShadow.Location = new System.Drawing.Point(184, 48);
+            this.panelShadow.Location = new System.Drawing.Point(184, 42);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1070, 17);
+            this.panelShadow.Size = new System.Drawing.Size(1070, 11);
             this.panelShadow.TabIndex = 2;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.DarkGray;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(184, 65);
+            this.panelDesktop.Location = new System.Drawing.Point(184, 53);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1070, 588);
+            this.panelDesktop.Size = new System.Drawing.Size(1070, 600);
             this.panelDesktop.TabIndex = 3;
             this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
             // 
@@ -370,6 +432,21 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxGithub;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxYouTube;
         private System.Windows.Forms.Button buttonAPI;
+        private FontAwesome.Sharp.IconButton iconButtonMEDIA2;
+        private FontAwesome.Sharp.IconButton iconButton6CROP;
+        private System.Windows.Forms.Button buttonRollOPEN;
+
+
+
+        /*
+
+        // TEST ZONE
+        private Panel panelSubMenuMedia;
+        private FontAwesome.Sharp.IconButton iconButtonCrop;
+        private FontAwesome.Sharp.IconButton iconButtonVideo;
+
+        */
+
     }
 }
 

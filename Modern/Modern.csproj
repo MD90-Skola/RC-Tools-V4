@@ -82,6 +82,12 @@
     <Compile Include="Forms\FolderFunctions\FunctionCDKey.cs" />
     <Compile Include="Forms\FolderFunctions\FunctionsDatorSpecs.cs" />
     <Compile Include="Forms\FolderFunctions\FunctionsKlocka.cs" />
+    <Compile Include="Forms\FormCROP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCROP.Designer.cs">
+      <DependentUpon>FormCROP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormHOME.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,10 +118,19 @@
     <Compile Include="Forms\FormCSGOROLL.Designer.cs">
       <DependentUpon>FormCSGOROLL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormMEDIA2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMEDIA2.Designer.cs">
+      <DependentUpon>FormMEDIA2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCROP.resx">
+      <DependentUpon>FormCROP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHOME.resx">
       <DependentUpon>FormHOME.cs</DependentUpon>
@@ -131,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCSGOROLL.resx">
       <DependentUpon>FormCSGOROLL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMEDIA2.resx">
+      <DependentUpon>FormMEDIA2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,6 +175,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.Designer.MD" />
+    <None Include="README.MD">
+      <SubType>Form</SubType>
+    </None>
     <None Include="Resources\Program\Autoruns.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

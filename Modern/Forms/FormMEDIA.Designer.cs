@@ -117,11 +117,12 @@
             this.webView21.AllowExternalDrop = true;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(3, -11);
+            this.webView21.Location = new System.Drawing.Point(53, -11);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(922, 482);
+            this.webView21.Size = new System.Drawing.Size(631, 482);
             this.webView21.TabIndex = 16;
             this.webView21.ZoomFactor = 1D;
+            this.webView21.Click += new System.EventHandler(this.webView21_Click);
             // 
             // label3
             // 

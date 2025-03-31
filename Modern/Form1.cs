@@ -44,10 +44,19 @@ namespace Modern
         private IconButton currentBtn;
         private Panel leftBoarderBtn;
         private Form currentChildForm;
+        
 
 
 
-        //constructor
+        // test zone
+        private Panel panelSubMedia;
+        private FontAwesome.Sharp.IconButton iconButtonCrop;
+        private FontAwesome.Sharp.IconButton iconButtonVideo;
+
+
+        // START   // START   // START   // START   // START   // START   // START   // START   // START 
+
+        //constructor      / START 
 
 
         public Form1()
@@ -58,9 +67,19 @@ namespace Modern
             panelMenu.Controls.Add(leftBoarderBtn);
             currentBtn = new IconButton();
             currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+            iconButton6CROP.Visible = false;
+            iconButtonMEDIA2.Visible = false;
+            buttonAPI.Visible = false;
+            buttonRollOPEN.Visible = false;
+
 
 
         }
+
+
+
+        // START   // START   // START   // START   // START   // START   // START   // START   // START   // START   // START   // START 
+
 
         //structure
 
@@ -210,6 +229,14 @@ namespace Modern
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new FormHOME());
+
+
+            iconButton6CROP.Visible = false;
+            iconButtonMEDIA2.Visible = false;
+            buttonAPI.Visible = false;
+            buttonRollOPEN.Visible = false;
+
+
         }
 
 
@@ -220,26 +247,37 @@ namespace Modern
             OpenChildForm(new FormINSTALL());
 
 
-
-
-
-
+            iconButton6CROP.Visible = false;
+            iconButtonMEDIA2.Visible = false;
+            buttonAPI.Visible = false;
+            buttonRollOPEN.Visible = false;
         }
 
 
-        // Övrigt Button Menu
+        // CLEAN 
         private void iconButton4_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormCONFIG());
+
+            buttonAPI.Visible = false;
+            iconButton6CROP.Visible = false;
+            iconButtonMEDIA2.Visible = false;
+            buttonRollOPEN.Visible = false;
         }
 
 
-        // Program Button Menu
+        // CSGOROLL
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new FormCSGOROLL());   
+            OpenChildForm(new FormCSGOROLL());
+
+            iconButton6CROP.Visible = false;
+            iconButtonMEDIA2.Visible = false;
+
+            buttonAPI.Visible = true;
+            buttonRollOPEN.Visible = true;
 
 
 
@@ -406,11 +444,25 @@ namespace Modern
 
         }
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new FormMEDIA());
-        }
+
+        // TEST ZONE 
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void iconPictureBoxYouTube_Click(object sender, EventArgs e)
         {
@@ -422,10 +474,84 @@ namespace Modern
             Process.Start("https://github.com/MD90-Skola/MD90-Skola");
         }
 
+
+
+
+
         private void buttonAPI_Click(object sender, EventArgs e)
         {
+            // 1. Öppna första URL
+            string url1 = "https://www.csgoroll.com/player/VXNlcjo2ODU5NTc2/summary";
+            Process.Start(new ProcessStartInfo(url1) { UseShellExecute = true });
+
+            // 2. Öppna andra URL
+            string url2 = "https://steamcommunity.com/id/me/edit/info";
+            Process.Start(new ProcessStartInfo(url2) { UseShellExecute = true });
+
+            // 3. Kopiera script till urklipp
+            string script = "document.getElementById(\"application_config\").getAttribute('data-loyalty_webapi_token');";
+
+            // Specifiera att vi använder System.Windows.Forms.Clipboard
+            System.Windows.Forms.Clipboard.SetText(script);
+        }
+
+
+
+
+
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMEDIA());
+            buttonAPI.Visible = false;
+            buttonRollOPEN.Visible = false;
+
+            // Öppna sub-menyn för Media om den inte redan är synlig
+            if (!iconButton6CROP.Visible && !iconButtonMEDIA2.Visible)
+            {
+                iconButton6CROP.Visible = true;
+                iconButtonMEDIA2.Visible = true;
+            }
+
+            // Aktivera Media-knappen
+            ActivateButton(sender, RGBColors.color5);
+        }
+
+
+        private void iconButton6CROP_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCROP());
+            buttonAPI.Visible = false;
+            buttonRollOPEN.Visible = false;
 
         }
+
+
+        private void iconButtonMEDIA2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMEDIA2());
+            buttonAPI.Visible = false;
+        }
+
+        private void buttonRollLogin_Click(object sender, EventArgs e)
+        {
+            string url1 = "https://www.csgoroll.com/withdraw/csgo/p2p";
+            Process.Start(new ProcessStartInfo(url1) { UseShellExecute = true });
+        }
+
+
+
+
+        private void iconButtonMEDIA2_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormMEDIA2());
+            buttonAPI.Visible = false;
+            buttonRollOPEN.Visible = false;
+            
+
+
+        }
+
 
 
 

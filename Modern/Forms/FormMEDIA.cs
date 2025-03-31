@@ -90,5 +90,10 @@ namespace Modern.Forms
                 }
             }
         }
+
+        private void webView21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
